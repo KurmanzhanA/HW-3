@@ -4,14 +4,14 @@ class Bank:
         self._balance = balance
 
     def moneyX(self):
-        add_money = float(input('Введите сумму добавления: '))
+        add_money = float(input('Input the amount to add: '))
         return self._balance + add_money
 
     def _kill(self):
-        # withdraw_money = float(input('Введите сумму добавления: '))
-        # print(self._balance - withdraw_money)
-        self._balance = 0
-        return self._balance
+        withdraw_money = float(input('Input the amount to withdraw: '))
+        print(self._balance - withdraw_money)
+        # self._balance
+        # return self._balance
 
     @property
     def kill(self):
@@ -25,16 +25,20 @@ class Bank:
         return self.__jackpot()
 
     def _manipulation(self, other):
-        return f'Ваш сложенный баланс {self._balance + other._balance} было {self._balance}'
+        return f'Your total balance {self._balance + other._balance} was {self._balance}'
 
     @property
     def manipulation(self):
         return self._manipulation(a)
 
 
-b = Bank('Optima', 2000)
-a = Bank('Mbank', 1000)
+b = Bank('Bakai', 20000)
+a = Bank('Demir', 10000)
 print(b.moneyX())
 print(b.jackpot)
 print(b.manipulation)
 print(b.kill)
+print(a.moneyX())
+print(a.jackpot)
+print(a.manipulation)
+print(a.kill)
